@@ -1,0 +1,55 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>weather-axis2</groupId>
+  <artifactId>weather-axis2</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>weather-axis2 Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  
+  <properties>
+	<jdk.version>1.8</jdk.version>
+  </properties>
+  
+  <dependencies>
+     <dependency>
+	  <groupId>org.apache.axis2</groupId>
+	  <artifactId>axis2-transport-http</artifactId>
+	  <version>1.7.7</version>
+	</dependency>
+	<dependency>
+	  <groupId>org.apache.axis2</groupId>
+	  <artifactId>axis2-transport-local</artifactId>
+	  <version>1.7.7</version>
+	</dependency>
+	<dependency>
+	  <groupId>org.apache.axis2</groupId>
+	  <artifactId>axis2-adb</artifactId>
+	  <version>1.7.7</version>
+	</dependency>
+	<dependency>
+		<groupId>org.jsoup</groupId>
+		<artifactId>jsoup</artifactId>
+		<version>1.8.1</version>
+	</dependency>
+	
+  </dependencies>
+  <build>
+    <finalName>weather-axis2</finalName>	
+	<plugins>
+		<!-- Compiler 插件, 设定JDK版本 -->
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-compiler-plugin</artifactId>
+			<version>2.5.1</version>
+			<configuration>
+				<source>${jdk.version}</source>
+				<target>${jdk.version}</target>
+				<showWarnings>true</showWarnings>
+			</configuration>
+		</plugin>
+	</plugins>	
+			
+  </build>
+</project>
